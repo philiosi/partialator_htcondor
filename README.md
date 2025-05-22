@@ -20,23 +20,21 @@ This project provides a set of scripts to run CrystFEL's `partialator` on multip
     * HTCondor's own log files for each job (e.g., `job.condor.out`, `job.condor.err`, `job.condor.log`) are stored in a subdirectory `<log_dir_base>/condor_job_logs/`.
 
 ## Directory Structure
-
+```
 crystfel_partialator_htcondor/
-├── CrystFEL_partialator.sh        # Execution script for HTCondor jobs
-├── submit_partialator_htcondor.sh # Main job submission script
-├── file_stream/                     # EXAMPLE: Place your input .stream files here
-│   ├── run001_chunk001.stream
-│   └── run001_chunk002.stream
-├── output_hkl/                      # DEFAULT: Output .hkl files (created automatically)
-├── logs_partialator_multi/          # DEFAULT: All logs (created automatically)
-│   ├── condor_job_logs/             # HTCondor system logs per job (created automatically)
-│   │   ├── run001_chunk001.condor.out
-│   │   ├── run001_chunk001.condor.err
-│   │   └── run001_chunk001.condor.log
-│   ├── run001_chunk001.out          # Stdout from CrystFEL_partialator.sh
-│   └── run001_chunk001.err          # Stderr from CrystFEL_partialator.sh
-└── README.md                        # This file
-
+├── CrystFEL_partialator.sh
+├── submit_partialator_htcondor.sh
+├── file_stream/
+│   ├── example1.stream
+│   └── example2.stream
+├── output_hkl/
+├── logs_partialator_multi/
+│   ├── condor_job_logs/
+│   │   ├── example1.condor.out
+│   │   └── example1.condor.err
+│   └── example1.out
+└── README.md
+```
 ## Prerequisites
 
 * HTCondor environment configured and accessible.
