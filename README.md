@@ -67,7 +67,8 @@ mkdir -p ./my_experiment/stream_files
 # (Copy your .stream files into ./my_experiment/stream_files)
 
 # Submit jobs
-./submit_partialator_htcondor.sh ./my_experiment/stream_files p1 8 ./my_experiment/hkl_output ./my_experiment/all_logs
+./submit_partialator_htcondor.sh <input_stream_dir> <symmetry> <num_cores> [output_dir_base] [log_dir_base]
+./submit_partialator_htcondor.sh ./my_experiment/stream_files p1 72 ./my_experiment/hkl_output ./my_experiment/all_logs
 ```
 
 ## Understanding Variables in the Scripts
